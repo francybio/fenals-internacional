@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es" data-mode="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fenals Internacional · Restaurante frente a la playa de Fenals, Lloret de Mar</title>
+<meta name="description" content="Restaurant Fenals Internacional, en primera línea de la playa de Fenals (Lloret de Mar): arroces y paellas, pescado fresco, marisco, carnes a la piedra y menú del mediodía. Todos los días. Reservas: 972 36 69 23.">
+<meta name="theme-color" content="#0E5A6B">
+<meta property="og:title" content="Fenals Internacional · A pie de playa">
+<meta property="og:description" content="Cocina mediterránea frente a la playa de Fenals, de día y de noche.">
+<meta property="og:image" content="assets/img/paella-chef.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%230E5A6B'/%3E%3Cpath d='M14 40 Q32 8 50 40 Z' fill='none' stroke='%23FBF9F4' stroke-width='3'/%3E%3Cpath d='M32 40 L32 18 M24 40 L28 20 M40 40 L36 20' stroke='%23FBF9F4' stroke-width='2'/%3E%3Cpath d='M10 46 Q20 41 32 46 T54 46' fill='none' stroke='%23E2B05A' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@1&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ INTRO · la ola ============ -->
+<div class="tide" id="tide" aria-hidden="true">
+  <svg class="tide__wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path id="tideWave" d="M0 60 Q360 0 720 60 T1440 60 V120 H0 Z"/></svg>
+  <div class="tide__body">
+    <svg class="shell shell--xl" viewBox="0 0 64 64"><use href="#shell"/></svg>
+    <p class="tide__name">Fenals <span>Internacional</span></p>
+    <p class="tide__sub">Platja de Fenals · Lloret de Mar</p>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="shell" viewBox="0 0 64 64">
+    <path d="M10 42 Q32 4 54 42 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M32 42 V16 M23 42 L27 18 M41 42 L37 18 M16 42 L22 24 M48 42 L42 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M6 50 Q19 44 32 50 T58 50" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Fenals Internacional, inicio">
+    <svg class="shell" viewBox="0 0 64 64" aria-hidden="true"><use href="#shell"/></svg>
+    <span>Fenals<small>Internacional</small></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Principal">
+    <a href="#hoy">Hoy</a>
+    <a href="#arroz">Arroces</a>
+    <a href="#carta">Carta</a>
+    <a href="#marea">Galería</a>
+    <a href="#historias">Historias</a>
+    <a href="#reservar">Reservar</a>
+  </nav>
+  <div class="nav__end">
+    <button class="dn" id="dnNav" type="button" aria-pressed="false" aria-label="Cambiar a modo noche">
+      <span class="dn__knob"><i class="ph-light ph-sun"></i><i class="ph-light ph-moon-stars"></i></span>
+    </button>
+    <a class="btn btn--sea btn--sm" href="tel:+34972366923"><i class="ph-light ph-phone"></i><span>972 36 69 23</span></a>
+    <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menú"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO · de día / de noche ============ -->
+  <section class="hero">
+    <div class="hero__media">
+      <video class="hero__v hero__v--day" data-src="assets/video/playa.mp4" poster="assets/img/poster-playa.jpg" muted loop playsinline preload="none" aria-label="La playa de Fenals desde el aire y el restaurante en primera línea"></video>
+      <video class="hero__v hero__v--night" data-src="assets/video/noche.mp4" poster="assets/img/poster-noche.jpg" muted loop playsinline preload="none" aria-label="La terraza de noche, marisco y paella"></video>
+    </div>
+    <div class="hero__shade"></div>
+    <div class="hero__copy">
+      <p class="hero__kicker"><svg class="shell" viewBox="0 0 64 64" aria-hidden="true"><use href="#shell"/></svg>Platja de Fenals · Lloret de Mar</p>
+      <h1 class="hero__title">
+        <span class="hero__t hero__t--day">A pie de playa.<em>El Mediterráneo, en la mesa.</em></span>
+        <span class="hero__t hero__t--night">Fenals de noche.<em>La terraza encendida y la orilla al lado.</em></span>
+      </h1>
+      <div class="hero__cta">
+        <a class="btn btn--light" href="tel:+34972366923"><i class="ph-light ph-phone"></i>Reservar · 972 36 69 23</a>
+        <a class="btn btn--ghost" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+    <div class="hero__switch">
+      <p class="hero__clock"><span id="clock">--:--</span> en Lloret · <b id="modeName">de día</b></p>
+      <button class="dn dn--big" id="dnHero" type="button" aria-pressed="false" aria-label="Cambiar a modo noche">
+        <span class="dn__lbl">Playa de día</span>
+        <span class="dn__track"><span class="dn__knob"><i class="ph-light ph-sun"></i><i class="ph-light ph-moon-stars"></i></span></span>
+        <span class="dn__lbl">Fenals de noche</span>
+      </button>
+    </div>
+    <svg class="hero__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 Q180 0 360 40 T720 40 T1080 40 T1440 40 V80 H0 Z"/></svg>
+  </section>
+
+  <!-- ============ HOY EN FENALS ============ -->
+  <section class="hoy" id="hoy" aria-labelledby="hoyT">
+    <div class="hoy__head">
+      <p class="eyebrow">Hoy en Fenals</p>
+      <h2 class="h2" id="hoyT"><span class="only-day">A mediodía,<br><i>menú con vistas.</i></span><span class="only-night">Para la noche,<br><i>las sugerencias.</i></span></h2>
+      <p class="lead only-day">Cocina ininterrumpida todo el día y, de 13 a 16 h, nuestro menú del mediodía: tres platos, pan, bebida y el mar delante.</p>
+      <p class="lead only-night">Cuando cae el sol, la terraza se enciende: marisco de concha, ostras con vino blanco, el chuletón a la piedra y arroces melosos para compartir.</p>
+    </div>
+
+    <div class="hoy__grid">
+      <!-- día: menú en su tablilla -->
+      <article class="clip only-day" aria-label="Menú del mediodía">
+        <span class="clip__clamp" aria-hidden="true"></span>
+        <div class="clip__paper">
+          <svg class="shell clip__logo" viewBox="0 0 64 64" aria-hidden="true"><use href="#shell"/></svg>
+          <h3>Menú del mediodía</h3>
+          <p class="clip__sub">De 13 a 16 h</p>
+          <h4>Primero</h4>
+          <ul><li>Ensalada César</li><li>Gazpacho de la casa</li><li>Huevos rotos con chorizo</li><li>Almejas en salsa verde</li></ul>
+          <h4>Segundo</h4>
+          <ul><li>Paella mixta</li><li>Chuleta de pavo a la plancha con puré de patatas</li><li>Espaguetis a la carbonara</li><li>Salmón teriyaki con verduras</li><li>Arroz caldoso con centollo <small>(supl. 12 €)</small> o con langosta <small>(supl. 15 €)</small> · mín. 2 personas</li></ul>
+          <h4>Postre</h4>
+          <p class="clip__inline">Fruta del tiempo · Arroz con leche · Pudin · Helado · Yogur natural · Flan · Crema catalana · Tarta de manzana</p>
+          <p class="clip__inc">Pan · ½ vino · agua o refresco</p>
+          <p class="clip__price">23 € <small>IVA incluido</small></p>
+          <p class="clip__note">No servimos medio menú. Platos según temporada.</p>
+        </div>
+      </article>
+      <figure class="hoy__photo only-day"><img src="assets/img/paella-chef.jpg" alt="El chef sostiene una paella de marisco en la terraza" loading="lazy" width="1200" height="1600"><figcaption>“Nuestro arroz no necesita presentación. Solo ganas de compartirlo.”</figcaption></figure>
+
+      <!-- noche: sugerencias -->
+      <article class="sugg only-night" aria-label="Sugerencias de la noche">
+        <h3>Sugerencias</h3>
+        <ul class="sugg__list">
+          <li><span>Ostras <small>con limón · la unidad</small></span><b>4,95</b></li>
+          <li><span>Surtido de marisco de concha</span><b>29,90</b></li>
+          <li><span>Chuletón de ternera de Bilbao <small>1 kg · a la piedra</small></span><b>49,90</b></li>
+          <li><span>Arroz meloso con centollo <small>mín. 2 personas · por persona</small></span><b>23,00</b></li>
+          <li><span>Burrata de búfala <small>con mermelada de tomate y rúcula</small></span><b>12,90</b></li>
+          <li><span>Carpaccio de magret de pato <small>con mango y parmesano</small></span><b>14,50</b></li>
+          <li><span>Hamburguesa ibérica premium 200 g <small>lechuga y cebolla caramelizada</small></span><b>13,50</b></li>
+        </ul>
+        <p class="sugg__q">“Ostras y vino blanco. Un pequeño lujo que apetece a cualquier hora.”</p>
+      </article>
+      <figure class="hoy__photo only-night"><img src="assets/img/ostras-1.jpg" alt="Ostras con limón y una copa de vino blanco sobre mantel blanco" loading="lazy" width="1200" height="1600"><figcaption>Ostras y vino blanco, en la terraza.</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ============ EL ARROZ · calculadora ============ -->
+  <section class="arroz" id="arroz" aria-labelledby="arrozT">
+    <div class="arroz__copy">
+      <p class="eyebrow eyebrow--light">Arroces de la casa</p>
+      <h2 class="h2" id="arrozT">¿Cuántos sois<br><i>a la mesa?</i></h2>
+      <p class="lead">Elige el arroz y dinos cuántos sois: te mostramos la paella repartida y lo que costará. Paella y fideuá también para una sola persona.</p>
+      <div class="rice" role="radiogroup" aria-label="Elegir arroz" id="rice"></div>
+      <div class="people">
+        <span class="people__lbl">Personas</span>
+        <button class="pm" type="button" id="pMinus" aria-label="Una persona menos"><i class="ph-light ph-minus"></i></button>
+        <output id="pCount" aria-live="polite">2</output>
+        <button class="pm" type="button" id="pPlus" aria-label="Una persona más"><i class="ph-light ph-plus"></i></button>
+      </div>
+      <p class="total"><span id="tTotal">35,90</span> € <small id="tNote">· 17,95 € por persona</small></p>
+    </div>
+    <div class="arroz__pan">
+      <svg viewBox="-120 -120 240 240" id="pan" role="img" aria-label="Paella repartida en raciones">
+        <defs>
+          <radialGradient id="rg" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#F2B347"/><stop offset=".75" stop-color="#D98B2B"/><stop offset="1" stop-color="#A9601B"/></radialGradient>
+          <radialGradient id="rgBlack" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#3B3836"/><stop offset="1" stop-color="#151413"/></radialGradient>
+          <radialGradient id="rgFid" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#F0C26A"/><stop offset="1" stop-color="#C98F38"/></radialGradient>
+        </defs>
+        <g class="pan__handles"><rect x="-128" y="-8" width="26" height="16" rx="8"/><rect x="102" y="-8" width="26" height="16" rx="8"/></g>
+        <circle r="106" class="pan__rim"/>
+        <circle r="96" id="panRice" fill="url(#rg)"/>
+        <g id="panTops"></g>
+        <g id="panSlices"></g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ CARTA ============ -->
+  <section class="carta" id="carta" aria-labelledby="cartaT">
+    <div class="carta__head">
+      <div>
+        <p class="eyebrow">La carta</p>
+        <h2 class="h2" id="cartaT">Del mar, de la brasa<br><i>y del horno.</i></h2>
+      </div>
+      <label class="search">
+        <i class="ph-light ph-magnifying-glass"></i>
+        <input type="search" id="q" placeholder="Busca: paella, lenguado, ostras…" autocomplete="off" aria-label="Buscar en la carta">
+      </label>
+    </div>
+    <div class="ctabs" role="tablist" aria-label="Secciones de la carta" id="ctabs"></div>
+    <ul class="clist" id="clist" aria-live="polite"></ul>
+    <p class="carta__note">Precios en euros con IVA incluido. Arroces con bogavante y centollo: mínimo 2 personas, precio por persona.</p>
+  </section>
+
+  <!-- ============ MAREA · carrusel en ola ============ -->
+  <section class="marea" id="marea" aria-labelledby="mareaT">
+    <div class="marea__head">
+      <p class="eyebrow eyebrow--light">@internacional_fenals_oficial</p>
+      <h2 class="h2" id="mareaT">Lo que trae <i>la marea.</i></h2>
+      <p class="lead">Arrastra la ola. Toca una foto para verla en grande.</p>
+    </div>
+    <div class="wave" id="wave" tabindex="0" aria-label="Carrusel de fotos. Usa las flechas para moverlo."></div>
+  </section>
+
+  <!-- ============ HISTORIAS · reels ============ -->
+  <section class="historias" id="historias" aria-labelledby="histT">
+    <div class="historias__head">
+      <p class="eyebrow">Historias del mar</p>
+      <h2 class="h2" id="histT">Desde nuestra<br><i>orilla.</i></h2>
+      <p class="lead">Vídeos de nuestro Instagram. Pasa por encima para verlos, toca para escucharlos.</p>
+    </div>
+    <div class="pebbles">
+      <button class="pebble" type="button" data-title="Una tabla de quesos, buen vino y el mar delante">
+        <video data-auto data-src="assets/video/quesos.mp4" poster="assets/img/poster-quesos.jpg" muted loop playsinline preload="none"></video>
+        <span>Sin prisas.<br>Sin reloj.</span>
+      </button>
+      <button class="pebble" type="button" data-title="Detrás de cada plato hay mucho más que una receta">
+        <video data-auto data-src="assets/video/detras.mp4" poster="assets/img/poster-detras.jpg" muted loop playsinline preload="none"></video>
+        <span>Detrás de<br>cada plato</span>
+      </button>
+      <button class="pebble" type="button" data-title="Manteles blancos, buenos vinos y cocina ininterrumpida">
+        <video data-auto data-src="assets/video/manteles.mp4" poster="assets/img/poster-manteles.jpg" muted loop playsinline preload="none"></video>
+        <span>Manteles<br>blancos</span>
+      </button>
+      <button class="pebble" type="button" data-title="Un buen chuletón: uno de esos pequeños grandes placeres">
+        <video data-auto data-src="assets/video/chuleton.mp4" poster="assets/img/poster-chuleton.jpg" muted loop playsinline preload="none"></video>
+        <span>El chuletón<br>a la piedra</span>
+      </button>
+      <button class="pebble" type="button" data-title="Playa de día. Fenals Internacional de noche">
+        <video data-auto data-src="assets/video/noche.mp4" poster="assets/img/poster-noche.jpg" muted loop playsinline preload="none"></video>
+        <span>Fenals<br>de noche</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="orilla" aria-labelledby="orT">
+    <h2 class="h2" id="orT">Lo que se dice <i>en la orilla.</i></h2>
+    <p class="lead">Más de 1.300 reseñas en Google. Algunas de las últimas:</p>
+    <div class="quotes">
+      <figure><p>Es increíble entrar por la puerta y que te reciban con una sonrisa y una copita de cava. Da igual lo que pidas: todos los productos frescos y cocinados con el mayor cariño.</p><cite>Reseña en Google</cite></figure>
+      <figure><p>Se puede pedir paella o fideuá solo para una persona. Hay mucha variedad en la carta y también menú del día. A primera línea de mar, ambiente tranquilo y trato muy atento.</p><cite>Reseña en Google</cite></figure>
+      <figure><p>Pedimos arroz y cordero para cenar y ambas cosas estaban buenísimas. La comida, espectacular tanto de sabor como de presentación.</p><cite>Reseña en Google</cite></figure>
+      <figure><p>Con vistas a la playa y un ambiente espectacular. Pizzas y fideuá deliciosas y con muy buena porción. Repetiríamos mil veces.</p><cite>Reseña en Google</cite></figure>
+    </div>
+  </section>
+
+  <!-- ============ RESERVAR ============ -->
+  <section class="reservar" id="reservar" aria-labelledby="resT">
+    <div class="reservar__info">
+      <p class="eyebrow">Reservar</p>
+      <h2 class="h2" id="resT">Primera línea<br><i>de Fenals.</i></h2>
+      <address>Carrer Domènech Carles, s/n · Platja de Fenals<br>17310 Lloret de Mar · Girona</address>
+      <p class="status" data-status><i></i><b>—</b></p>
+      <ul class="facts">
+        <li><i class="ph-light ph-clock"></i><span><b>Todos los días</b> de 9:00 a 23:00 · cocina ininterrumpida</span></li>
+        <li><i class="ph-light ph-fork-knife"></i><span><b>Menú del mediodía</b> de 13:00 a 16:00 · 23 €</span></li>
+        <li><i class="ph-light ph-waves"></i><span><b>Terraza</b> a pocos pasos del Mediterráneo</span></li>
+      </ul>
+      <div class="reservar__cta">
+        <a class="btn btn--sea" href="tel:+34972366923"><i class="ph-light ph-phone"></i>972 36 69 23</a>
+        <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&destination=Restaurant%20Fenals%20Internacional%2C%20Lloret%20de%20Mar" target="_blank" rel="noopener"><i class="ph-light ph-navigation-arrow"></i>Cómo llegar</a>
+        <a class="btn btn--line" href="https://www.instagram.com/internacional_fenals_oficial/" target="_blank" rel="noopener"><i class="ph-light ph-instagram-logo"></i>Instagram</a>
+      </div>
+    </div>
+    <div class="reservar__map">
+      <iframe title="Mapa: Restaurant Fenals Internacional en la playa de Fenals" src="https://maps.google.com/maps?q=Restaurant%20Fenals%20Internacional%2C%20Lloret%20de%20Mar&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <svg class="foot__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 Q180 80 360 40 T720 40 T1080 40 T1440 40 V0 H0 Z"/></svg>
+  <div class="foot__in">
+    <p class="foot__big">Fenals <i>Internacional</i></p>
+    <div class="foot__row">
+      <span>Restaurante frente a la playa de Fenals · Lloret de Mar</span>
+      <span>Fotos y vídeos: Instagram @internacional_fenals_oficial y Google</span>
+    </div>
+  </div>
+</footer>
+
+<!-- lightbox / reproductor -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Ampliado" hidden>
+  <button class="lb__close" type="button" aria-label="Cerrar"><i class="ph-light ph-x"></i></button>
+  <div class="lb__media"></div>
+  <p class="lb__cap"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
