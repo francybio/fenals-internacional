@@ -155,10 +155,36 @@ const want = new URLSearchParams(location.search).get('mode');
 const { min: nowMin } = madridNow();
 setMode(want === 'night' || want === 'day' ? want : (nowMin >= 1170 || nowMin < 420 ? 'night' : 'day'), false);
 $$('.dn').forEach((b) => b.addEventListener('click', () => setMode(root.dataset.mode === 'night' ? 'day' : 'night')));
+/* fondo de la ventana (pantallas apaisadas): el vídeo en 40×24 px, desenfocado
+   por CSS; cada fotograma se mezcla con el anterior y el cambio día/noche funde solo */
+const amb = $('.hero__amb'), actx = amb.getContext('2d');
+const wide = matchMedia('(min-width: 1081px) and (orientation: landscape)');
+const posters = new Map([vDay, vNight].map((v) => { const i = new Image(); i.src = v.poster; return [v, i]; }));
+let ambRaf = 0, ambLast = 0;
+function ambDraw(alpha) {
+  const v = root.dataset.mode === 'night' ? vNight : vDay;
+  const src = v.readyState >= 2 ? v : posters.get(v);
+  if (src === v || src.complete) { actx.globalAlpha = alpha; actx.drawImage(src, 0, 0, amb.width, amb.height); }
+}
+function ambTick(now) {
+  ambRaf = requestAnimationFrame(ambTick);
+  if (now - ambLast < 66) return;
+  ambLast = now; ambDraw(0.22);
+}
+function ambSync() {
+  const on = wide.matches && heroVisible;
+  if (on && !ambRaf) { ambDraw(1); if (!reduced) ambRaf = requestAnimationFrame(ambTick); }
+  if (!on && ambRaf) { cancelAnimationFrame(ambRaf); ambRaf = 0; }
+}
+posters.forEach((img) => img.addEventListener('load', () => { if (wide.matches) ambDraw(reduced ? 1 : 0.5); }));
+wide.addEventListener('change', ambSync);
+if (reduced) $$('.dn').forEach((b) => b.addEventListener('click', () => ambDraw(1)));
+
 new IntersectionObserver(([e]) => {
   heroVisible = e.isIntersecting;
   const v = root.dataset.mode === 'night' ? vNight : vDay;
   if (heroVisible) ensure(v); else { vDay.pause(); vNight.pause(); }
+  ambSync();
 }, { threshold: 0.05 }).observe($('.hero'));
 
 /* vídeos perezosos (historias) */
